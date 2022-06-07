@@ -1,24 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search Results View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchResultsViewController" customModule="CyberRomTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="q4E-Kb-4bu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nG-Uw-RLe" customClass="EmptyDataView" customModule="CyberRomTest" customModuleProvider="target">
+                                <rect key="frame" x="16" y="325" width="382" height="256"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="9vF-cJ-5ZM"/>
+                                </constraints>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5hl-SZ-cQ7">
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3nG-Uw-RLe" secondAttribute="trailing" constant="16" id="2cf-pJ-hWC"/>
+                            <constraint firstItem="5hl-SZ-cQ7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IKg-2o-wu8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5hl-SZ-cQ7" secondAttribute="trailing" id="ONC-Cy-BYz"/>
+                            <constraint firstAttribute="trailing" secondItem="q4E-Kb-4bu" secondAttribute="trailing" id="Ohv-kK-OSO"/>
+                            <constraint firstAttribute="bottom" secondItem="5hl-SZ-cQ7" secondAttribute="bottom" id="QbV-Fp-CTA"/>
+                            <constraint firstItem="q4E-Kb-4bu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sov-bg-Rqa"/>
+                            <constraint firstItem="3nG-Uw-RLe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="anX-Ib-9e1"/>
+                            <constraint firstItem="5hl-SZ-cQ7" firstAttribute="top" secondItem="q4E-Kb-4bu" secondAttribute="bottom" id="kek-Fg-dk4"/>
+                            <constraint firstItem="q4E-Kb-4bu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nK6-OG-X5y"/>
+                            <constraint firstItem="3nG-Uw-RLe" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uA3-pO-2dx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emptyDataView" destination="3nG-Uw-RLe" id="cww-Qq-8LR"/>
+                        <outlet property="searchBar" destination="q4E-Kb-4bu" id="LLV-j4-cNg"/>
+                        <outlet property="searchResultsTableView" destination="5hl-SZ-cQ7" id="vJz-9r-yZV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="105.80357142857143"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

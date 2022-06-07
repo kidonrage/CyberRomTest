@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C608761A284B0E22006D4C78 /* SearchResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6087614284B0E22006D4C78 /* SearchResultsPresenter.swift */; };
+		C608761B284B0E22006D4C78 /* SearchResultsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6087615284B0E22006D4C78 /* SearchResultsWorker.swift */; };
+		C608761D284B0E22006D4C78 /* SearchResultsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6087617284B0E22006D4C78 /* SearchResultsModels.swift */; };
+		C608761E284B0E22006D4C78 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6087618284B0E22006D4C78 /* SearchResultsViewController.swift */; };
+		C608761F284B0E22006D4C78 /* SearchResultsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6087619284B0E22006D4C78 /* SearchResultsInteractor.swift */; };
+		C6AAEE77284A785A00377993 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AAEE76284A785A00377993 /* UIImageView+Extensions.swift */; };
 		C6E13E1A2848E7E300E9DA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E192848E7E300E9DA3B /* AppDelegate.swift */; };
 		C6E13E1C2848E7E300E9DA3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E1B2848E7E300E9DA3B /* SceneDelegate.swift */; };
-		C6E13E1E2848E7E300E9DA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E1D2848E7E300E9DA3B /* ViewController.swift */; };
 		C6E13E212848E7E300E9DA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E13E1F2848E7E300E9DA3B /* Main.storyboard */; };
 		C6E13E232848E7E600E9DA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E13E222848E7E600E9DA3B /* Assets.xcassets */; };
 		C6E13E262848E7E600E9DA3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E13E242848E7E600E9DA3B /* LaunchScreen.storyboard */; };
+		C6E13E32284964B500E9DA3B /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6E13E31284964B400E9DA3B /* EmptyDataView.xib */; };
+		C6E13E34284966FA00E9DA3B /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E33284966FA00E9DA3B /* EmptyDataView.swift */; };
+		C6E13E362849693300E9DA3B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E352849693200E9DA3B /* UIView+Extensions.swift */; };
+		C6E13E39284969CF00E9DA3B /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E37284969CF00E9DA3B /* QuestionTableViewCell.swift */; };
+		C6E13E3A284969CF00E9DA3B /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6E13E38284969CF00E9DA3B /* QuestionTableViewCell.xib */; };
+		C6E13E3C28496E0F00E9DA3B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E3B28496E0F00E9DA3B /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C6087614284B0E22006D4C78 /* SearchResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsPresenter.swift; sourceTree = "<group>"; };
+		C6087615284B0E22006D4C78 /* SearchResultsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsWorker.swift; sourceTree = "<group>"; };
+		C6087617284B0E22006D4C78 /* SearchResultsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsModels.swift; sourceTree = "<group>"; };
+		C6087618284B0E22006D4C78 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		C6087619284B0E22006D4C78 /* SearchResultsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsInteractor.swift; sourceTree = "<group>"; };
+		C6AAEE76284A785A00377993 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		C6E13E162848E7E300E9DA3B /* CyberRomTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberRomTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E13E192848E7E300E9DA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6E13E1B2848E7E300E9DA3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C6E13E1D2848E7E300E9DA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6E13E202848E7E300E9DA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6E13E222848E7E600E9DA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6E13E252848E7E600E9DA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6E13E272848E7E600E9DA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6E13E31284964B400E9DA3B /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
+		C6E13E33284966FA00E9DA3B /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
+		C6E13E352849693200E9DA3B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C6E13E37284969CF00E9DA3B /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		C6E13E38284969CF00E9DA3B /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		C6E13E3B28496E0F00E9DA3B /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +59,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6087613284B0E08006D4C78 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				C6087620284D72DE006D4C78 /* Cells */,
+				C6087614284B0E22006D4C78 /* SearchResultsPresenter.swift */,
+				C6087615284B0E22006D4C78 /* SearchResultsWorker.swift */,
+				C6087617284B0E22006D4C78 /* SearchResultsModels.swift */,
+				C6087618284B0E22006D4C78 /* SearchResultsViewController.swift */,
+				C6087619284B0E22006D4C78 /* SearchResultsInteractor.swift */,
+			);
+			path = SearchResults;
+			sourceTree = "<group>";
+		};
+		C6087620284D72DE006D4C78 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C6E13E37284969CF00E9DA3B /* QuestionTableViewCell.swift */,
+				C6E13E38284969CF00E9DA3B /* QuestionTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C6CD365C284F808F00D290CA /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C6E13E352849693200E9DA3B /* UIView+Extensions.swift */,
+				C6AAEE76284A785A00377993 /* UIImageView+Extensions.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C6CD365D284F80A200D290CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6E13E3B28496E0F00E9DA3B /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6CD365E284F80B500D290CA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C6E13E31284964B400E9DA3B /* EmptyDataView.xib */,
+				C6E13E33284966FA00E9DA3B /* EmptyDataView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C6CD365F284F80E400D290CA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C6087613284B0E08006D4C78 /* SearchResults */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		C6E13E0D2848E7E300E9DA3B = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +134,16 @@
 		C6E13E182848E7E300E9DA3B /* CyberRomTest */ = {
 			isa = PBXGroup;
 			children = (
+				C6E13E272848E7E600E9DA3B /* Info.plist */,
 				C6E13E192848E7E300E9DA3B /* AppDelegate.swift */,
 				C6E13E1B2848E7E300E9DA3B /* SceneDelegate.swift */,
-				C6E13E1D2848E7E300E9DA3B /* ViewController.swift */,
-				C6E13E1F2848E7E300E9DA3B /* Main.storyboard */,
 				C6E13E222848E7E600E9DA3B /* Assets.xcassets */,
+				C6CD365E284F80B500D290CA /* Components */,
 				C6E13E242848E7E600E9DA3B /* LaunchScreen.storyboard */,
-				C6E13E272848E7E600E9DA3B /* Info.plist */,
+				C6E13E1F2848E7E300E9DA3B /* Main.storyboard */,
+				C6CD365D284F80A200D290CA /* Models */,
+				C6CD365F284F80E400D290CA /* Scenes */,
+				C6CD365C284F808F00D290CA /* Tools */,
 			);
 			path = CyberRomTest;
 			sourceTree = "<group>";
@@ -127,6 +208,8 @@
 			files = (
 				C6E13E262848E7E600E9DA3B /* LaunchScreen.storyboard in Resources */,
 				C6E13E232848E7E600E9DA3B /* Assets.xcassets in Resources */,
+				C6E13E32284964B500E9DA3B /* EmptyDataView.xib in Resources */,
+				C6E13E3A284969CF00E9DA3B /* QuestionTableViewCell.xib in Resources */,
 				C6E13E212848E7E300E9DA3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +221,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6E13E1E2848E7E300E9DA3B /* ViewController.swift in Sources */,
+				C608761E284B0E22006D4C78 /* SearchResultsViewController.swift in Sources */,
+				C608761B284B0E22006D4C78 /* SearchResultsWorker.swift in Sources */,
 				C6E13E1A2848E7E300E9DA3B /* AppDelegate.swift in Sources */,
+				C608761D284B0E22006D4C78 /* SearchResultsModels.swift in Sources */,
+				C608761A284B0E22006D4C78 /* SearchResultsPresenter.swift in Sources */,
+				C6E13E362849693300E9DA3B /* UIView+Extensions.swift in Sources */,
+				C6E13E39284969CF00E9DA3B /* QuestionTableViewCell.swift in Sources */,
+				C6E13E34284966FA00E9DA3B /* EmptyDataView.swift in Sources */,
 				C6E13E1C2848E7E300E9DA3B /* SceneDelegate.swift in Sources */,
+				C608761F284B0E22006D4C78 /* SearchResultsInteractor.swift in Sources */,
+				C6AAEE77284A785A00377993 /* UIImageView+Extensions.swift in Sources */,
+				C6E13E3C28496E0F00E9DA3B /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RNXT6P5KC8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CyberRomTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RNXT6P5KC8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CyberRomTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyDataView" customModule="CyberRomTest" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="406"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-Zh-QOs">
+                    <rect key="frame" x="0.0" y="135" width="382" height="136.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stack-overflow" translatesAutoresizingMaskIntoConstraints="NO" id="MRl-ZI-i8q">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="V14-H8-5At"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions list is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ4-D1-Khy">
+                            <rect key="frame" x="0.0" y="116" width="382" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Ocu-Zh-QOs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4xj-Oc-q9A"/>
+                <constraint firstAttribute="trailing" secondItem="Ocu-Zh-QOs" secondAttribute="trailing" id="IB3-8o-doj"/>
+                <constraint firstItem="Ocu-Zh-QOs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vh2-bW-X3C"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="170.75892857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="stack-overflow" width="56.5" height="66.5"/>
+    </resources>
+</document>

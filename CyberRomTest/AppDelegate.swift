@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  CyberRomTest
-//
-//  Created by Aura on 02.06.2022.
-//
-
 import UIKit
 
 @main
