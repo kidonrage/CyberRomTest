@@ -5,9 +5,7 @@ protocol SearchResultsBusinessLogic {
     func searchForQuestions(request: SearchResults.SearchForQuestions.Request)
 }
 
-protocol SearchResultsDataStore {
-    //var name: String { get set }
-}
+protocol SearchResultsDataStore {}
 
 class SearchResultsInteractor: SearchResultsBusinessLogic, SearchResultsDataStore {
     
@@ -32,9 +30,10 @@ class SearchResultsInteractor: SearchResultsBusinessLogic, SearchResultsDataStor
             let response = SearchResults.SearchForQuestions.Response(foundQuestions: foundQuestions)
             self?.presenter?.presentFoundQuestions(response: response)
             
-            if let error = error {
-//                self?.presenter?.presentError(error: error)
-            }
+            // Можно добавить обработку ошибок но это за рамками тестового :)
+            //            if let error = error {
+            //                self?.presenter?.presentError(error: error)
+            //            }
         })
     }
 }

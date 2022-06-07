@@ -1,7 +1,8 @@
 import UIKit
 
-class SearchResultsWorker {
+final class SearchResultsWorker {
     
+    // MARK: - Private Properties
     private let defaultSession = URLSession(configuration: .default)
     private let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -10,6 +11,7 @@ class SearchResultsWorker {
     }()
     private var searchDataTask: URLSessionDataTask?
     
+    // MARK: - Public Methods
     func searchForQuestions(byQuery query: String?, completion: @escaping ([Question]?, Error?) -> Void) {
         searchDataTask?.cancel()
         

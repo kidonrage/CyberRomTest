@@ -1,9 +1,11 @@
 import UIKit
 
-class RemoteImageView: UIImageView {
+final class RemoteImageView: UIImageView {
     
-    var pendingLoadImageTask: URLSessionDataTask?
+    // MARK: - Private Properties
+    private var pendingLoadImageTask: URLSessionDataTask?
     
+    // MARK: - Public Methods
     func setImage(from url: URL?, placeholder: UIImage? = nil) {
         pendingLoadImageTask?.cancel()
         

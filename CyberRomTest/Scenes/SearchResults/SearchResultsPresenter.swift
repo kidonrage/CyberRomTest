@@ -1,14 +1,16 @@
 import UIKit
 
 protocol SearchResultsPresentationLogic {
+    
     func presentFoundQuestions(response: SearchResults.SearchForQuestions.Response)
 }
 
-class SearchResultsPresenter: SearchResultsPresentationLogic {
+final class SearchResultsPresenter: SearchResultsPresentationLogic {
+    
+    // MARK: Public Properties
     weak var viewController: SearchResultsDisplayLogic?
     
-    // MARK: Do something
-    
+    // MARK: Public Methods
     func presentFoundQuestions(response: SearchResults.SearchForQuestions.Response) {
         let viewModel = SearchResults.SearchForQuestions.ViewModel(foundQuestions: response.foundQuestions)
         DispatchQueue.main.async {

@@ -5,19 +5,18 @@ protocol SearchResultsDisplayLogic: AnyObject {
     func displaySearchResults(viewModel: SearchResults.SearchForQuestions.ViewModel)
 }
 
-class SearchResultsViewController: UIViewController, SearchResultsDisplayLogic {
+final class SearchResultsViewController: UIViewController, SearchResultsDisplayLogic {
     
-    // MARK: - @IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet private(set) weak var searchBar: UISearchBar!
     @IBOutlet private(set) weak var searchResultsTableView: UITableView!
     @IBOutlet private(set) weak var emptyDataView: EmptyDataView!
     
-    // MARK: - Properties
+    // MARK: - Public Properties
     var interactor: SearchResultsBusinessLogic?
     var questionsToDisplay: [Question] = []
     
     // MARK: Object lifecycle
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setupScene()
@@ -29,7 +28,6 @@ class SearchResultsViewController: UIViewController, SearchResultsDisplayLogic {
     }
     
     // MARK: VC Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,8 +35,7 @@ class SearchResultsViewController: UIViewController, SearchResultsDisplayLogic {
         searchForQuestions()
     }
     
-    // MARK: Public
-    
+    // MARK: Public methods
     func searchForQuestions() {
         let request = SearchResults.SearchForQuestions.Request(searchQuery: searchBar.text)
         interactor?.searchForQuestions(request: request)
@@ -51,8 +48,7 @@ class SearchResultsViewController: UIViewController, SearchResultsDisplayLogic {
         emptyDataView.isHidden = viewModel.isResultsVisible
     }
     
-    // MARK: Private
-    
+    // MARK: Private methods
     private func setupScene() {
         let viewController = self
         let interactor = SearchResultsInteractor()
