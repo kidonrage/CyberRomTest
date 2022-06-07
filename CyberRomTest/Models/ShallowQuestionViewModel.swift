@@ -8,4 +8,5 @@ struct ShallowQuestionViewModel {
     let ownerAvatarURL: URL?
     let answerCount: String
     let creationDate: String
+    let url: URL?
 }

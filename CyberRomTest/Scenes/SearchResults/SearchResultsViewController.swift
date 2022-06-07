@@ -67,6 +67,7 @@ final class SearchResultsViewController: UIViewController, SearchResultsDisplayL
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
@@ -123,6 +124,11 @@ extension SearchResultsViewController: UITableViewDataSource, UITableViewDelegat
             answersCount: question.answerCount
         ))
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let question = questionsToDisplay[indexPath.row]
+        interactor?.handleGoingToQuestionDetails(questionURL: question.url)
     }
 }
 

@@ -29,7 +29,8 @@ final class SearchResultsPresenter: SearchResultsPresentationLogic {
                     from: Date(
                         timeIntervalSince1970: TimeInterval(question.creationDate)
                     )
-                )
+                ),
+                url: URL(string: question.link)
             )
         } ?? []
         let viewModel = SearchResults.SearchForQuestions.ViewModel(foundQuestions: foundQuestions)

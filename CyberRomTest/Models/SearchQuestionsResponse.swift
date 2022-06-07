@@ -13,6 +13,7 @@ struct SearchQuestionsResponse: Decodable {
         let owner: Owner?
         let answerCount: Int
         let creationDate: Int
+        let link: String
     }
     
     let items: [Item]
