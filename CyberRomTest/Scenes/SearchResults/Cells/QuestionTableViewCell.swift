@@ -5,18 +5,14 @@ final class QuestionTableViewCell: UITableViewCell {
     static let reuseId = "QuestionTableViewCell"
 
     @IBOutlet private(set) weak var questionTitleLabel: UILabel!
-    @IBOutlet private(set) weak var authorPhotoImageView: UIImageView!
+    @IBOutlet private(set) weak var authorPhotoImageView: RemoteImageView!
     @IBOutlet private(set) weak var authorNicknameLabel: UILabel!
     @IBOutlet private(set) weak var dateLabel: UILabel!
     @IBOutlet private(set) weak var answersCountLabel: UILabel!
     
     func configureUI(with config: UIConfig) {
         questionTitleLabel.text = config.questionTitle
-        if let authorImagePath = config.authorImagePath,
-           let authorImageURL = URL(string: authorImagePath)
-        {
-            authorPhotoImageView.load(url: authorImageURL)
-        }
+        authorPhotoImageView.setImage(from: URL(string: config.authorImagePath ?? ""))
         authorNicknameLabel.text = config.authorNickname
         dateLabel.text = config.date
         answersCountLabel.text = config.answersCount
