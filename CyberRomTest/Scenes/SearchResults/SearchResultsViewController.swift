@@ -14,7 +14,7 @@ final class SearchResultsViewController: UIViewController, SearchResultsDisplayL
     
     // MARK: - Public Properties
     var interactor: SearchResultsBusinessLogic?
-    var questionsToDisplay: [Question] = []
+    var questionsToDisplay: [ShallowQuestionViewModel] = []
     
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -61,6 +61,13 @@ final class SearchResultsViewController: UIViewController, SearchResultsDisplayL
     private func setupUI() {
         setupTable()
         setupSearchBar()
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     private func setupTable() {
@@ -72,6 +79,25 @@ final class SearchResultsViewController: UIViewController, SearchResultsDisplayL
     
     private func setupSearchBar() {
         searchBar.delegate = self
+    }
+    
+    @objc private func adjustForKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            searchResultsTableView.contentInset = .zero
+        } else {
+            searchResultsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+        }
+        
+        searchResultsTableView.scrollIndicatorInsets = searchResultsTableView.contentInset
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 
@@ -88,13 +114,13 @@ extension SearchResultsViewController: UITableViewDataSource, UITableViewDelegat
             return UITableViewCell()
         }
         
-        let item = questionsToDisplay[indexPath.row]
+        let question = questionsToDisplay[indexPath.row]
         cell.configureUI(with: .init(
-            questionTitle: item.title,
-            authorImagePath: item.owner?.profileImage,
-            authorNickname: item.owner?.displayName ?? "Unknown",
-            date: "\(item.creationDate)",
-            answersCount: "\(item.answerCount)"
+            questionTitle: question.title,
+            authorImageURL: question.ownerAvatarURL,
+            authorNickname: question.ownerNickname,
+            date: question.creationDate,
+            answersCount: question.answerCount
         ))
         return cell
     }

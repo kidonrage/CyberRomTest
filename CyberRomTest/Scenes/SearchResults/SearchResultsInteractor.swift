@@ -26,8 +26,8 @@ class SearchResultsInteractor: SearchResultsBusinessLogic, SearchResultsDataStor
     }
     
     private func performSearch(searchQuery: String?) {
-        worker.searchForQuestions(byQuery: searchQuery, completion: { [weak self] foundQuestions, error in
-            let response = SearchResults.SearchForQuestions.Response(foundQuestions: foundQuestions)
+        worker.searchForQuestions(byQuery: searchQuery, completion: { [weak self] searchResponse, error in
+            let response = SearchResults.SearchForQuestions.Response(foundQuestions: searchResponse?.items)
             self?.presenter?.presentFoundQuestions(response: response)
             
             // Можно добавить обработку ошибок но это за рамками тестового :)

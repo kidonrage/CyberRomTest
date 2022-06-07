@@ -14,6 +14,7 @@
 		C608761F284B0E22006D4C78 /* SearchResultsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6087619284B0E22006D4C78 /* SearchResultsInteractor.swift */; };
 		C6CD3661284F858700D290CA /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD3660284F858700D290CA /* RemoteImageView.swift */; };
 		C6CD3663284F863F00D290CA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD3662284F863F00D290CA /* ImageCache.swift */; };
+		C6CD3667284F8FEB00D290CA /* ShallowQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD3666284F8FEB00D290CA /* ShallowQuestionViewModel.swift */; };
 		C6E13E1A2848E7E300E9DA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E192848E7E300E9DA3B /* AppDelegate.swift */; };
 		C6E13E1C2848E7E300E9DA3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E1B2848E7E300E9DA3B /* SceneDelegate.swift */; };
 		C6E13E212848E7E300E9DA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E13E1F2848E7E300E9DA3B /* Main.storyboard */; };
@@ -24,7 +25,7 @@
 		C6E13E362849693300E9DA3B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E352849693200E9DA3B /* UIView+Extensions.swift */; };
 		C6E13E39284969CF00E9DA3B /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E37284969CF00E9DA3B /* QuestionTableViewCell.swift */; };
 		C6E13E3A284969CF00E9DA3B /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6E13E38284969CF00E9DA3B /* QuestionTableViewCell.xib */; };
-		C6E13E3C28496E0F00E9DA3B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E3B28496E0F00E9DA3B /* Response.swift */; };
+		C6E13E3C28496E0F00E9DA3B /* SearchQuestionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E13E3B28496E0F00E9DA3B /* SearchQuestionsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C6087619284B0E22006D4C78 /* SearchResultsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsInteractor.swift; sourceTree = "<group>"; };
 		C6CD3660284F858700D290CA /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		C6CD3662284F863F00D290CA /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		C6CD3666284F8FEB00D290CA /* ShallowQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShallowQuestionViewModel.swift; sourceTree = "<group>"; };
 		C6E13E162848E7E300E9DA3B /* CyberRomTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberRomTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E13E192848E7E300E9DA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6E13E1B2848E7E300E9DA3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +49,7 @@
 		C6E13E352849693200E9DA3B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		C6E13E37284969CF00E9DA3B /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		C6E13E38284969CF00E9DA3B /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
-		C6E13E3B28496E0F00E9DA3B /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C6E13E3B28496E0F00E9DA3B /* SearchQuestionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuestionsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,8 @@
 		C6CD365D284F80A200D290CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C6E13E3B28496E0F00E9DA3B /* Response.swift */,
+				C6E13E3B28496E0F00E9DA3B /* SearchQuestionsResponse.swift */,
+				C6CD3666284F8FEB00D290CA /* ShallowQuestionViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,12 +234,13 @@
 				C608761D284B0E22006D4C78 /* SearchResultsModels.swift in Sources */,
 				C608761A284B0E22006D4C78 /* SearchResultsPresenter.swift in Sources */,
 				C6E13E362849693300E9DA3B /* UIView+Extensions.swift in Sources */,
+				C6CD3667284F8FEB00D290CA /* ShallowQuestionViewModel.swift in Sources */,
 				C6E13E39284969CF00E9DA3B /* QuestionTableViewCell.swift in Sources */,
 				C6E13E34284966FA00E9DA3B /* EmptyDataView.swift in Sources */,
 				C6E13E1C2848E7E300E9DA3B /* SceneDelegate.swift in Sources */,
 				C608761F284B0E22006D4C78 /* SearchResultsInteractor.swift in Sources */,
 				C6CD3661284F858700D290CA /* RemoteImageView.swift in Sources */,
-				C6E13E3C28496E0F00E9DA3B /* Response.swift in Sources */,
+				C6E13E3C28496E0F00E9DA3B /* SearchQuestionsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ final class SearchResultsWorker {
     private var searchDataTask: URLSessionDataTask?
     
     // MARK: - Public Methods
-    func searchForQuestions(byQuery query: String?, completion: @escaping ([Question]?, Error?) -> Void) {
+    func searchForQuestions(byQuery query: String?, completion: @escaping (SearchQuestionsResponse?, Error?) -> Void) {
         searchDataTask?.cancel()
         
         guard let query = query, !query.isEmpty else {
@@ -41,16 +41,13 @@ final class SearchResultsWorker {
                     return
                 }
                 
-                var foundQuestions: [Question]?
                 do {
-                    let decodedResponse = try jsonDecoder.decode(Response.self, from: data)
-                    foundQuestions = decodedResponse.items
+                    let decodedResponse = try jsonDecoder.decode(SearchQuestionsResponse.self, from: data)
+                    completion(decodedResponse, error)
                 } catch {
                     print("Error decoding response", error)
-                    completion(foundQuestions, error)
+                    completion(nil, error)
                 }
-                
-                completion(foundQuestions, error)
             }
             
             searchDataTask?.resume()

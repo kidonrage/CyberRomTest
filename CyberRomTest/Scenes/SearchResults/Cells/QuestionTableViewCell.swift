@@ -15,7 +15,7 @@ final class QuestionTableViewCell: UITableViewCell {
     // MARK: - Public methods
     func configureUI(with config: UIConfig) {
         questionTitleLabel.text = config.questionTitle
-        authorPhotoImageView.setImage(from: URL(string: config.authorImagePath ?? ""))
+        authorPhotoImageView.setImage(from: config.authorImageURL)
         authorNicknameLabel.text = config.authorNickname
         dateLabel.text = config.date
         answersCountLabel.text = config.answersCount
@@ -27,7 +27,7 @@ extension QuestionTableViewCell {
     
     struct UIConfig {
         let questionTitle: String
-        let authorImagePath: String?
+        let authorImageURL: URL?
         let authorNickname: String
         let date: String
         let answersCount: String

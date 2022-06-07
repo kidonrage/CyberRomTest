@@ -11,11 +11,11 @@ enum SearchResults {
         }
         
         struct Response {
-            let foundQuestions: [Question]?
+            let foundQuestions: [SearchQuestionsResponse.Item]?
         }
         
         struct ViewModel {
-            let foundQuestions: [Question]?
+            let foundQuestions: [ShallowQuestionViewModel]?
             var isResultsVisible: Bool {
                 return (foundQuestions?.count ?? 0) > 0
             }
